@@ -1,0 +1,30 @@
+{
+  "name": "Registartion",
+  "version": "0.0.1",
+  "homepage": "",
+  "authors": [
+    "Valentyn Kurlian"
+  ],
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "*",
+    "underscore-amd": "*",
+    "backbone-amd": "*",
+    "requirejs": "*",
+    "handlebars": "*",
+    "backbone-validation": "*",
+    "jQuery.serializeObject": "~2.0.3"
+  },
+  "ignoredDependencies": [
+    "backbone",
+    "underscore"
+  ]
+}

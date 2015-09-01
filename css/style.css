@@ -1,0 +1,110 @@
+.wrapper {
+    max-width: 1000px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.registration-step1,
+.registration-step2 {
+    width: 100%;
+    float: left;
+}
+
+.registration-step1 fieldset,
+.registration-step2 fieldset{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.form-row {
+    padding: 5px 0;
+    width: 100%;
+    float: left;
+}
+.form-row label {
+    width: 30%;
+    float: left;
+    text-align : right;
+    padding-right: 5%;
+}
+
+.form-row .input-col {
+    width: 55%;
+    padding-right: 10%;
+    float: left;
+}
+
+.form-row .input-col input{
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+.form-row .error-msg {
+    display: none;
+    float: left;
+    width: 100%;
+    color: red;
+    padding-top: 3px;
+}
+
+.form-row.error .error-msg {
+    display: inline-block;
+}
+.form-row.error label {
+    color: red;
+}
+.form-row.error input {
+    border-color: red;
+}
+
+.next-step {
+    width: 40%;
+    max-width: 300px;
+    float: right;
+    margin: 20px 3px 0 0;
+    padding: 3px 20px;
+}
+
+.registration-step2 .form-row label {
+    text-align: left;
+    width: 25%;
+    padding: 0 0 0 10%;
+}
+
+.registration-step2 .delete-container{
+    width: 55%;
+    padding: 0 10% 0 35%;
+    max-width: 350px;
+    float: left;
+}
+.registration-step2 .delete-account {
+    float: right;
+    margin-top: 5px;
+    padding: 3px 20px;
+}
+
+.registration-step2 .add-account {
+    padding: 3px 20px;
+    float: right;
+    margin-top: 20px;
+}
+
+.registration-step2 .save {
+    padding: 3px 20px;
+    float: right;
+    clear: right;
+    margin-top: 40px;
+}
+
+.error-message {
+    color: red;
+    display: none;
+    text-align: center;
+    padding: 10px;
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+}
