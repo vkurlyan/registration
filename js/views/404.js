@@ -2,14 +2,14 @@
  * View for 404 error
  */
 define(['backbone',
-        'templates/404'
-],function (Backbone, error404Tmp) {
+        'compiledTemplates'
+],function (Backbone, templates) {
 
     return Backbone.View.extend({
 
         el: $("#page"),
 
-        template: error404Tmp,
+        template: templates['404'],
 
         /**
          * It renders message "Page not found"

@@ -2,12 +2,12 @@
  * View for 1 bank account
  */
 define(['backbone',
-        'templates/registration/bankAccount'
-],function (Backbone, bankAccountTmp) {
+        'compiledTemplates'
+],function (Backbone, templates) {
 
     return Backbone.View.extend({
 
-        template: bankAccountTmp,
+        template: templates['registration/bankAccount'],
 
         events: {
             "click .delete-account" : "onDeleteBankAccount"

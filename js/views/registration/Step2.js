@@ -3,17 +3,16 @@
  */
 define(['jquery',
         'backbone',
-        'templates/registration/step2',
+        'compiledTemplates',
         'models/BankAccount',
-        'collections/BankAccounts',
         'views/registration/BankAccount'
-],function ($, Backbone, step2Tmp, BankAccountModel, BankAccountsCollection, BankAccountView) {
+],function ($, Backbone, templates, BankAccountModel, BankAccountView) {
 
     return Backbone.View.extend({
 
         el: $("#page"),
 
-        template: step2Tmp,
+        template: templates['registration/step2'],
 
         events: {
             "click .add-account" : "onAddBankAccount",
@@ -25,12 +24,7 @@ define(['jquery',
          * @returns {*}
          */
         initialize: function () {
-
-            var bankAccountsCollection = new BankAccountsCollection([new BankAccountModel]);
-
-            bankAccountsCollection.on('add', this.renderBankAccount, this );
-            this.model.set('bankAccounts', bankAccountsCollection);
-
+            this.model.get('bankAccounts').on('add', this.renderBankAccount, this );
             return this;
         },
 
@@ -84,10 +78,12 @@ define(['jquery',
             if (this.model.get('bankAccounts').areAllValid()) {
 
                 this.model.save(null, {
+
                     success: $.proxy(function() {
                         this.undelegateEvents();
                         this.navigate('registration/success', {trigger: true});
                     }, this),
+
                     error: $.proxy(function() {
                         this.$errorMessage.text("Bad Request").show();
                     }, this)

@@ -5,8 +5,10 @@ define([
     'views/registration/Success',
     'views/404',
     'models/UserProfile',
+    'models/BankAccount',
+    'collections/BankAccounts',
     'serializeObject'
-], function(Backbone, validation, RegistrationStep1View, RegistrationSuccessView, error404View, UserProfile) {
+], function(Backbone, validation, RegistrationStep1View, RegistrationSuccessView, error404View, UserProfile, BankAccountModel, BankAccountsCollection) {
 
     var Router = Backbone.Router.extend({
         routes: {
@@ -20,7 +22,11 @@ define([
          */
         registrationAction:  function(){
             new RegistrationStep1View({
-                model: new UserProfile
+                model: new UserProfile({
+                    bankAccounts: new BankAccountsCollection(
+                        [new BankAccountModel]
+                    )
+                })
             }).render();
         },
 

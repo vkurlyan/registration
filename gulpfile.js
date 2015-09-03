@@ -1,10 +1,7 @@
 var gulp = require('gulp');
-var defineModule = require('gulp-define-module');
-var handlebars = require('gulp-handlebars');
+var shell = require('gulp-shell');
 
-gulp.task('templates', function() {
-	gulp.src('templates/**/*.hbs')
-    .pipe(handlebars())
-    .pipe(defineModule('amd'))
-    .pipe(gulp.dest('js/templates/'));
-});
+gulp.task('templates', shell.task([
+        'handlebars -a -m templates/> js/compiledTemplates.js'
+    ])
+);

@@ -2,15 +2,15 @@
  * View for step 1 of registration
  */
 define(['backbone',
-        'templates/registration/step1',
+        'compiledTemplates',
         'views/registration/Step2'
-],function (Backbone, step1Tmp, Step2View) {
+],function (Backbone, templates, Step2View) {
 
     return Backbone.View.extend({
 
         el: $("#page"),
 
-        template: step1Tmp,
+        template: templates['registration/step1'],
 
         events: {
             "submit" : "onNextStep"
@@ -39,7 +39,8 @@ define(['backbone',
          * Validates model and renders second step of registration
          * @returns {boolean}
          */
-        onNextStep: function(){
+        onNextStep: function(e){
+            e.preventDefault();
             this.model.set(this.$form.serializeObject());
 
             if(this.model.isValid(true)){
@@ -51,8 +52,6 @@ define(['backbone',
                     model: this.model
                 }).render();
             }
-
-            return false;
         },
 
         /**

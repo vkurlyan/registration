@@ -1,3 +1,0 @@
-define(["handlebars"], function(Handlebars) { return Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<form class=\"registration-step2\">\r\n    <div class=\"bank-accounts\"></div>\r\n    <div class=\"error-message\"></div>\r\n    <button type=\"button\" class=\"add-account\">Add Bank Account</button>\r\n    <input type=\"submit\" class=\"save\" value=\"Save\"/>\r\n</form>";
-},"useData":true}); });

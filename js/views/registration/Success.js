@@ -2,14 +2,14 @@
  * View for success message
  */
 define(['backbone',
-        'templates/registration/success'
-],function (Backbone, successTmp) {
+        'compiledTemplates'
+],function (Backbone, templates) {
 
     return Backbone.View.extend({
 
         el: $("#page"),
 
-        template: successTmp,
+        template: templates['registration/success'],
 
         /**
          * Renders success message after registration
