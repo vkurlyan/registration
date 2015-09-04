@@ -2,7 +2,7 @@
  * View for success message
  */
 define(['backbone',
-        'compiledTemplates'
+        'js/compiledTemplates'
 ],function (Backbone, templates) {
 
     return Backbone.View.extend({

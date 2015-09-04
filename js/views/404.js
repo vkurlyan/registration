@@ -2,7 +2,7 @@
  * View for 404 error
  */
 define(['backbone',
-        'compiledTemplates'
+        'js/compiledTemplates'
 ],function (Backbone, templates) {
 
     return Backbone.View.extend({

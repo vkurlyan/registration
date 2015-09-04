@@ -2,7 +2,7 @@
  * View for 1 bank account
  */
 define(['backbone',
-        'compiledTemplates'
+        'js/compiledTemplates'
 ],function (Backbone, templates) {
 
     return Backbone.View.extend({

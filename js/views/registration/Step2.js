@@ -3,9 +3,9 @@
  */
 define(['jquery',
         'backbone',
-        'compiledTemplates',
-        'models/BankAccount',
-        'views/registration/BankAccount'
+        'js/compiledTemplates',
+        'js/models/BankAccount',
+        'js/views/registration/BankAccount'
 ],function ($, Backbone, templates, BankAccountModel, BankAccountView) {
 
     return Backbone.View.extend({

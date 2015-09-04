@@ -1,14 +1,14 @@
 define([
     'backbone',
-    'validation',
-    'views/registration/Step1',
-    'views/registration/Success',
-    'views/404',
-    'models/UserProfile',
-    'models/BankAccount',
-    'collections/BankAccounts',
+    'js/views/registration/Step1',
+    'js/views/registration/Success',
+    'js/views/404',
+    'js/models/UserProfile',
+    'js/models/BankAccount',
+    'js/collections/BankAccounts',
+    'js/validation',
     'serializeObject'
-], function(Backbone, validation, RegistrationStep1View, RegistrationSuccessView, error404View, UserProfile, BankAccountModel, BankAccountsCollection) {
+], function(Backbone, RegistrationStep1View, RegistrationSuccessView, error404View, UserProfileModel, BankAccountModel, BankAccountsCollection) {
 
     var Router = Backbone.Router.extend({
         routes: {
@@ -22,7 +22,7 @@ define([
          */
         registrationAction:  function(){
             new RegistrationStep1View({
-                model: new UserProfile({
+                model: new UserProfileModel({
                     bankAccounts: new BankAccountsCollection(
                         [new BankAccountModel]
                     )
@@ -51,7 +51,6 @@ define([
          * Initialization of app
          */
         initialize: function(){
-            validation.initialize();
             var router = new Router;
 
             Backbone.View.prototype.navigate = function (location, options) {

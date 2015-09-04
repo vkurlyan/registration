@@ -2,8 +2,8 @@
  * View for step 1 of registration
  */
 define(['backbone',
-        'compiledTemplates',
-        'views/registration/Step2'
+        'js/compiledTemplates',
+        'js/views/registration/Step2'
 ],function (Backbone, templates, Step2View) {
 
     return Backbone.View.extend({

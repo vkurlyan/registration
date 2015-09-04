@@ -1,6 +1,6 @@
 define([
     'backbone',
-    'models/BankAccount'
+    'js/models/BankAccount'
 ], function(Backbone, BankAccountModel) {
 
     var BankAccountsCollection = Backbone.Collection.extend({

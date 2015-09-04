@@ -4,7 +4,7 @@ define([
     'backbone-validation'
 ], function(_, Backbone) {
 
-    return {
+    var validation = {
         /**
          * Sets up validation for whole application
          */
@@ -53,5 +53,9 @@ define([
                 alphanumeric: '{0} must contain only letters, numbers and spaces'
             });
         }
-    }
+    };
+
+    validation.initialize();
+
+    return validation;
 });
