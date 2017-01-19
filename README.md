@@ -1,3 +1,7 @@
+# Registration page example
+
+It's based on Backbone, RequireJS, Handlebars templates, Jasmine/Karma tests, Gulp.
+
 Application can be launched locally by opening index.html.
 
 However, you need to start node.js server to see success message after registration.
